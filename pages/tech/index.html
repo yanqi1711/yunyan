@@ -1,0 +1,810 @@
+<!DOCTYPE html><html><head>
+      <title>index</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/yanqi/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  left: unset!important;
+  transform: unset!important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 10px !important;
+}
+.markdown-preview a {
+  color: #758AD3;
+}
+.markdown-preview a:hover {
+  color: #687cc1;
+}
+.markdown-preview #version,
+.markdown-preview #flash {
+  color: #121212;
+}
+.markdown-preview #version:hover,
+.markdown-preview #flash:hover {
+  color: #636060;
+}
+::selection {
+  background-color: #DFDFDF;
+}
+.pink {
+  color: #D777B1 !important;
+}
+.yellow {
+  color: #E3B65E !important;
+}
+.blue {
+  color: #80BEDF !important;
+}
+.red {
+  color: #f87171 !important;
+}
+.cyan {
+  color: #34d399 !important;
+}
+.orange {
+  color: #fb923c !important;
+}
+.op50 {
+  opacity: 0.5 !important;
+}
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem!important;
+}
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+.option {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.option:hover {
+  left: 0%!important;
+}
+.btn-rose:hover {
+  color: #FB7185 !important;
+  background-color: rgba(252, 187, 195, 0.3) !important;
+  cursor: pointer;
+}
+.btn-rose:active {
+  color: #FB7185 !important;
+  background-color: rgba(253, 136, 152, 0.3) !important;
+  cursor: pointer;
+}
+hr {
+  width: 50px !important;
+  height: 0.7px !important;
+  margin: 2.3em auto !important;
+}
+.logo {
+  background: rgba(136, 136, 136, 0.133);
+  border-radius: 5%;
+  padding: 3px 6px;
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(-100%);
+  /* Move the tooltip above by default */
+}
+.card {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background: #fff;
+  border: 1px solid rgba(136, 136, 136, 0.27);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.card-text {
+  margin-left: 14px;
+  margin-right: 20px;
+  line-height: 28px;
+  color: #555555;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+th,
+td {
+  padding: 0.5rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border: 0px!important;
+}
+tr {
+  border-bottom: 2px solid rgba(156, 163, 175, 0.2);
+}
+tr:hover {
+  background-color: #FAFAFB !important;
+}
+table {
+  display: table!important;
+}
+.techtable tr {
+  border-bottom: none!important;
+}
+.flash:hover {
+  color: #727272 !important;
+}
+.tag-purple {
+  color: #2424a8;
+  background-color: rgba(36, 36, 168, 0.1);
+  border-radius: 5px;
+  font-size: small;
+  white-space: nowrap;
+  padding: 1px;
+}
+.tag-green {
+  color: #75a824;
+  background-color: rgba(117, 168, 36, 0.1);
+  border-radius: 5px;
+  font-size: small;
+  white-space: nowrap;
+  padding: 1px;
+}
+.table-head {
+  text-align: left!important;
+  font-size: 14px;
+  font-weight: 400!important;
+  line-height: 20px;
+  opacity: 0.5;
+}
+.table-head-right {
+  text-align: right!important;
+  font-size: 14px;
+  font-weight: 400!important;
+  line-height: 20px;
+  opacity: 0.5;
+}
+.table-body {
+  text-align: left;
+  font-weight: 400;
+  line-height: 24px;
+}
+.table-body-right {
+  text-align: right;
+  font-weight: 400;
+  line-height: 24px;
+}
+button {
+  cursor: pointer;
+}
+.showBtn {
+  padding: 0 8px;
+  border: 1px solid rgba(170, 170, 170, 0.2);
+  font-size: 16px;
+  border-radius: 0.25rem;
+  background-color: rgba(156, 163, 175, 0.02);
+  color: #AB5E3F !important;
+}
+.top {
+  font-size: 16px;
+  font-weight: bold;
+  color: #AB5E3F;
+  padding: 1rem;
+  border-bottom: 1px solid #aaaaaa33;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script> --><script type="text/javascript" src="https://unpkg.com/p5@1.9.4/lib/p5.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopBtn = document.createElement("button");
+    scrollToTopBtn.setAttribute("id", "scrollToTopBtn");
+    scrollToTopBtn.textContent = "↑";
+    scrollToTopBtn.style.fontSize = "1.2rem"
+    scrollToTopBtn.style.display = "none";
+    scrollToTopBtn.style.position = "fixed";
+    scrollToTopBtn.style.bottom = "20px";
+    scrollToTopBtn.style.right = "20px";
+    scrollToTopBtn.style.zIndex = "99";
+    scrollToTopBtn.style.color = "#0009";
+    scrollToTopBtn.style.cursor = "pointer";
+    scrollToTopBtn.style.padding = "10px 17px";
+    scrollToTopBtn.style.borderRadius = "9999px";
+    scrollToTopBtn.style.border = 'none';
+    scrollToTopBtn.style.backgroundColor = 'transparent';
+
+    document.body.appendChild(scrollToTopBtn);
+
+    // 当页面滚动时触发
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      // 如果页面滚动到视口高度的30%以上，显示回到顶部按钮，否则隐藏按钮
+      if (document.body.scrollTop > (document.documentElement.clientHeight * 0.3) || document.documentElement.scrollTop > (document.documentElement.clientHeight * 0.3)) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    // 平滑滚动到页面顶部
+    function scrollToTop() {
+      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (currentScroll > 0) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    scrollToTopBtn.addEventListener('mouseover', function () {
+      scrollToTopBtn.style.backgroundColor = '#8883';
+    });
+
+    scrollToTopBtn.addEventListener('mouseout', function () {
+      scrollToTopBtn.style.backgroundColor = 'transparent';
+    });
+
+    scrollToTopBtn.onclick = function () {
+      scrollToTop();
+    };
+
+    if (!localStorage.getItem("background")) {
+      localStorage.setItem("background", "white");
+    }
+  });
+
+  let w = window.innerWidth
+  let h = window.innerHeight
+  const offsetY = window.scrollY
+
+  const SCALE = 200
+  const LENGTH = 10
+  const SPACING = 15
+  let shouldDrawBackground = true;
+
+  function getForceOnPoint(x, y, z) {
+    // https://p5js.org/reference/#/p5/noise
+    return (noise(x / SCALE, y / SCALE, z) - 0.5) * 2 * TWO_PI
+  }
+
+  const existingPoints = new Set()
+  const points = []
+
+  function addPoints() {
+    for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
+      for (let y = -SPACING / 2; y < h + offsetY + SPACING; y += SPACING) {
+        const id = `${x}-${y}`
+        if (existingPoints.has(id))
+          continue
+        existingPoints.add(id)
+        points.push({ x, y, opacity: Math.random() * 0.5 + 0.5 })
+      }
+    }
+  }
+
+  function setup() {
+    createCanvas(w, h)
+    background('#ffffff')
+    const canvas = document.querySelector('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.zIndex = '-1';
+    noFill()
+    noiseSeed(+new Date())
+    frameRate(30)
+    addPoints()
+    if (localStorage.getItem("background") !== "dots") {
+      shouldDrawBackground = false;
+      noLoop()
+    }
+    // console.log('初始化')
+  }
+
+  function draw() {
+    if (shouldDrawBackground) {
+      background('#ffffff')
+      const t = +new Date() / 10000
+
+      for (const p of points) {
+        const { x, y } = p
+        const rad = getForceOnPoint(x, y, t)
+        const length = (noise(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH
+        const nx = x + cos(rad) * length
+        const ny = y + sin(rad) * length
+        stroke(200, 200, 200, (Math.abs(cos(rad)) * 0.8 + 0.2) * p.opacity * 255)
+        circle(nx, ny - offsetY, 1)
+      }
+    }
+    // console.log('draw')
+  }
+
+  window.addEventListener('resize', () => {
+    if (localStorage.getItem("background" === "dots")) {
+      w = window.innerWidth
+      h = window.innerHeight
+      resizeCanvas(w, h)
+      addPoints()
+    }
+  })
+
+  function toggleCanvas() {
+    let background = localStorage.getItem("background");
+    if (background !== "dots") {
+      localStorage.setItem("background", "dots")
+      shouldDrawBackground = true
+      loop()
+    } else {
+      localStorage.setItem("background", "white")
+      shouldDrawBackground = false
+      noLoop()
+      clear()
+    }
+  }
+
+</script>
+</head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="option" style="position:fixed;top:25%;left:-6em;z-index:9999;">
+  <button class="btn-rose" onclick="toggleCanvas()" style="border: 1px solid rgba(125,125,125,.3);
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+    background:none;
+    padding:8px 6px 8px 12px;
+    color:rgba(55,65,81,0.7);">
+    <div style="border-right:3px solid #778CD5;padding:4px 4px 4px 0px;">
+      <b style="padding-right:7px;">background</b>
+    </div>
+  </button>
+</div>
+<div style="
+  height:4rem;
+  width:100%;
+  color:rgba(55,65,81,0.3);
+  margin-bottom:1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:right;">
+    <a style="color:rgba(55,65,81,0.3); 
+    margin-left:0.7rem;
+    border-bottom:1px solid #7d7d7d4d" href="../../index.html">cd ..</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<p><strong>Tech</strong>Show</p>
+<div id="overlay" style="position:fixed;top:0;left:0;z-index:1000;width:100%;height:100%;margin:0 auto;display:none;">
+  <div id="camera" style="position:fixed;top:2rem;left:5vw;z-index:1001;width:90vw;height:calc(100% - 4rem);margin:0 auto;backdrop-filter:blur(10px);border:1px solid rgba(125,125,125,.3);border-radius:5px;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);display:none;">
+<div class="top">云控森云相机固件</div>
+<div style="display:grid;grid-template-columns:2.4fr 1fr;height:calc(100% - 4rem);">
+<div style="overflow:auto;padding:1rem;">
+<b>工具准备</b><br>
+需要GMSL盒子、USB数据线、FT4222数据线、同轴线、森云相机<br>
+<img width="45%" src="../../public/img/GMSL盒子.jpg">
+<p><b>固件刷写</b></p>
+<ol>
+<li>
+<p>首先连接好线束，用<code>USB数据线</code>连接盒子和电脑USB接口、用<code>FT4222数据线</code>连接盒子和电脑USB接口、用<code>同轴线</code>连接盒子和相机</p>
+</li>
+<li>
+<p>设备管理器中禁用本地相机，只保留SENSING相机，如果线束连接好了，会出现下图两个总线<br>
+<img width="45%" style="border:1px solid #aaaaaa33;" src="../../screenshots/FT4222.png"></p>
+</li>
+<li>
+<p>打开SensingCaptureV2⼯具软件，加载点亮配置（左上角工具中I2C设备需切换到USB）<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/dianliang.png"></p>
+</li>
+<li>
+<p>加载烧写配置<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/shaoxie.png"></p>
+</li>
+<li>
+<p>I2C设备切换到MCU<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/mcu.png"></p>
+</li>
+<li>
+<p>打开Musk3，点击Burn<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/burn.png"></p>
+</li>
+<li>
+<p>选择需要烧写的固件，点击Download，烧写完毕会出现Download succeeds<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/download_succeeds.png"><br>
+森云提供的出厂版本固件为<code>OX01F10_SR1031_27mclk_96Mpixclk_1280x960_30fps_UYVY_slave_11230904030101.bin</code></p>
+</li>
+</ol>
+<p><b>固件版本查看</b></p>
+如果相机刚刚烧写完，则需重新插拔一下相机，才能继续下面操作，线束和烧写时一样的接法
+<ol>
+<li>
+<p>打开SensingCaptureV2⼯具软件，加载点亮配置（左上角工具中I2C设备需切换到USB）<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/dianliang.png"></p>
+</li>
+<li>
+<p>加载读取版本配置<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/readversion.png"></p>
+</li>
+<li>
+<p>I2C设备切换到MCU<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/mcu.png"></p>
+</li>
+<li>
+<p>左上角工具中点击<code>相机固件升级</code>，选择OV确定后关闭窗口<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/ov.png"></p>
+</li>
+<li>
+<p>重新打开<code>相机固件升级</code>窗口，点击读取版本号<br>
+<img style="border:1px solid #aaaaaa33;" src="../../screenshots/version.png"></p>
+</li>
+</ol>
+</div>
+<div style="overflow:auto;border-left:1px solid #aaaaaa33;">
+<div style="padding:1rem;border-bottom:1px solid #aaaaaa33;">
+<div class="op50 text-sm">Files</div>
+<span>文件在 <b class="orange">smb文件服务器</b>，请连接实验室有线或无线网</span>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/smb_sensing.png">
+</div>
+<div style="padding:1rem;">
+<div class="op50 text-sm">Paths</div>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\techshow\sensing
+</code></pre></div>
+</div>
+</div>
+</div>
+  <div id="five" style="position:fixed;top:2rem;left:5vw;z-index:1001;width:90vw;height:calc(100% - 4rem);margin:0 auto;backdrop-filter:blur(10px);border:1px solid rgba(125,125,125,.3);border-radius:5px;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);display:none;">
+<div class="top">移远5G固件签名</div>
+<div style="display:grid;grid-template-columns:2.4fr 1fr;height:calc(100% - 4rem);">
+<div style="overflow:auto;padding:1rem;">
+<b>准备</b>
+<p>一台可以上网的ubuntu18.04的电脑或虚拟机，我这里是使用的虚拟机</p>
+<p>移远有已经构建好环境的docker镜像，这里直接使用移远提供的镜像进行签名操作</p>
+<p><b>Docker安装</b><br>
+Docker 分为免费的 CE（Community Edition）社区版本和 EE（Enterprise Edition）企业级付费版本，所以我们这里选择 docker-ce 进行安装。官方安装文档：<a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<p>首先安装一些工具：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg lsb-release
+</code></pre><p>接着安装官方的 GPG key：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /etc/apt/keyrings
+
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
+</code></pre><p>最后将 Docker 的库添加到 apt 资源列表中：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token builtin class-name">echo</span> <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu <span class="token variable"><span class="token variable">$(</span>lsb_release <span class="token parameter variable">-cs</span><span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">&gt;</span> /dev/null
+</code></pre><p>接着我们更新一次 apt：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code> <span class="token function">sudo</span> <span class="token function">apt</span> update
+</code></pre><p>最后安装 Docker CE 版本：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code> <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> docker-ce
+</code></pre><p>最后我们将当前用户添加到 docker 用户组中，不然每次使用 docker 命令都需要 sudo 执行，很麻烦：</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">sudo</span> <span class="token function">usermod</span> <span class="token parameter variable">-aG</span> <span class="token function">docker</span> <span class="token operator">&lt;</span>用户名<span class="token operator">&gt;</span>
+</code></pre><p><b>创建官方提供的镜像容器</b></p>
+<p>首先，拉取官方镜像</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">docker</span> pull registry.cn-hangzhou.aliyuncs.com/quectel/ubuntu:secboot_v2
+</code></pre><p>拉取成功后可以使用<code>docker images</code>查看到该镜像<br>
+<img src="../../screenshots/docker_quectel.png"></p>
+<p>然后创建容器，将目前容器的<code>/media</code>目录持久化共享到本地的一个目录，方便后面文件复制粘贴，后续如果操作失误删除了容器，文件也不会丢失</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token comment"># 这里使用本地的 ~/test 目录作为共享目录</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">-v</span> ~/test:/media <span class="token parameter variable">--name</span> <span class="token builtin class-name">test</span> registry.cn-hangzhou.aliyuncs.com/quectel/ubuntu:secboot_v2
+</code></pre><p><b>将签名工具放进容器中</b></p>
+<p>这里直接放在共享目录下<br>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/sec_tools.png"></p>
+<p>刚刚创建容器完毕会直接进入到容器系统中，我们直接在容器系统中执行解压操作</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code># 先进入到/media中
+cd /media
+# 解压
+tar -xf ql_sa515m_nork_mro_SecBootTools_Release_v2.4.1.tar.gz
+</code></pre><blockquote>
+<p>如果不小心退出容器了，则执行下面命令可以重新进入</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">docker</span> start <span class="token builtin class-name">test</span>
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> <span class="token builtin class-name">test</span> <span class="token function">bash</span>
+</code></pre></blockquote>
+<p><b>镜像签名</b></p>
+<p>我们直接使用生成好的证书就行，即压缩包<code>yuexiang_key.zip</code></p>
+<p>首先，将yuexiang_key中的四个文件替换到签名工具中的<code>certs</code>目录下<br>
+<img src="../../screenshots/yuexiang_key.png"></p>
+<p>然后，获取证书的PK-HASH</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token comment"># 在yuexiang_key文件夹中输入</span>
+sha384sum oem_rootca.cer
+</code></pre><img src="../../screenshots/hash.png">
+<p>然后，将签名工具中 common/sectools/config/sdx55/sdx55_fuseblower_USER.xml 文件中的<br>
+root_cert_hash 值替换成生成的 PK-HASH 值<br>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/hash0.png"></p>
+<p>然后，将需要签名的文件放进签名工具 firmwares 目录中</p>
+<p>一个没有签过名的固件有下面这些文件需要签名</p>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/sign1.png">
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/sign2.png">
+<p>最后，进行签名</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token comment"># 先进入到工具目录下</span>
+<span class="token builtin class-name">cd</span> /media/ql_sa515m_nork_mro_SecBootTools_Release_v2.4.1
+<span class="token comment"># 执行脚本进行签名</span>
+./signImage.sh
+</code></pre><img src="../../screenshots/sign.png">
+<img src="../../screenshots/sign_done.png">
+<p>生成好的文件在签名工具的 output/SignImg 目录中，我将对应文件都替换回去</p>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/cp1.png">
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/cp2.png">
+<p>至此，固件签名已经完成了</p>
+<p><b>生成 sec.elf 文件</b></p>
+<p>这个是开启secboot需要的文件，在签名工具中执行</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token comment"># 这里默认你已经按照上面操作替换了PK-HASH了</span>
+./genSecdat.sh
+</code></pre><img src="../../screenshots/secelf.png">
+<p>sec.elf 文件已经生成过了，如果证书不变的话可以继续使用</p>
+</div>
+<div style="overflow:auto;border-left:1px solid #aaaaaa33;">
+<div style="padding:1rem;border-bottom:1px solid #aaaaaa33;">
+<div class="op50 text-sm">Files</div>
+<span>文件在 <b class="orange">smb文件服务器</b>，请连接实验室有线或无线网</span>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/smb_signimg.png">
+</div>
+<div style="padding:1rem;">
+<div class="op50 text-sm">Paths</div>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\techshow\sign-img
+</code></pre></div>
+</div>
+</div>
+</div>
+  <div id="os" style="position:fixed;top:2rem;left:5vw;z-index:1001;width:90vw;height:calc(100% - 4rem);margin:0 auto;backdrop-filter:blur(10px);border:1px solid rgba(125,125,125,.3);border-radius:5px;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);display:none;">
+<div class="top">i.MX8QM系统编译</div>
+<div style="display:grid;grid-template-columns:2.4fr 1fr;height:calc(100% - 4rem);">
+<div style="overflow:auto;padding:1rem;">
+<b>准备</b>
+<p>需使用Ubuntu16.04系统的电脑/虚拟机</p>
+<p>预装环境</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">apt-get</span> <span class="token function">install</span> build-essential <span class="token function">bc</span> <span class="token function">curl</span> ca-certificates fakeroot gnupg2 libssl-dev lsb-release libelf-dev bison flex
+</code></pre><p><b>安装交叉编译器</b></p>
+<ol>
+<li>
+<p>将fsl-imx-xwayland-glibc-x86_64-meta-toolchain-aarch64-toolchain-4.14-sumo.sh拷贝到/opt</p>
+</li>
+<li>
+<p>安装交叉编译器</p>
+</li>
+</ol>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token builtin class-name">cd</span> /opt
+./fsl-imx-xwayland-glibc-x86_64-meta-toolchain-aarch64-toolchain-4.14-sumo.sh
+</code></pre><p>上面步骤需要管理员身份</p>
+<p><b>导入环境变量</b></p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token builtin class-name">source</span> /opt/fsl-imx-xwayland/4.14-sumo/environment-setup-aarch64-poky-linux
+</code></pre><p><b>解压内核</b></p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">tar</span> <span class="token parameter variable">-jxvf</span> imx_4.14.98_2.0.0_ga.tar.bz2
+</code></pre><p><b>编译内核</b></p>
+<ol>
+<li>设备环境变量</li>
+<li>unset LDFLAGS</li>
+<li>unset PKG_CONFIG_PATH</li>
+<li>make defconfig</li>
+<li>make -j12</li>
+</ol>
+<p><b>生成内核目标文件所在目录</b></p>
+<ol>
+<li>
+<p>内核目标文件：<code>imx_4.14.98_2.0.0_ga/arch/arm64/boot/Image</code></p>
+</li>
+<li>
+<p>设备树目标文件：<code>imx_4.14.98_2.0.0_ga/arch/arm64/boot/dts/freescale/fsl-imx8qm-mek-jdi-wuxga-lvds0-panel.dtb</code></p>
+</li>
+</ol>
+</div>
+<div style="overflow:auto;border-left:1px solid #aaaaaa33;">
+<div style="padding:1rem;border-bottom:1px solid #aaaaaa33;">
+<div class="op50 text-sm">Files</div>
+<span>文件在 <b class="orange">smb文件服务器</b>，请连接实验室有线或无线网</span>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/files_os.png">
+</div>
+<div style="padding:1rem;">
+<div class="op50 text-sm">Paths</div>
+<p>sh:</p>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\IMX8加森云相机\OS驱动文档
+</code></pre><p>驱动及系统源码:</p>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\IMX8加森云相机\OS驱动文档\OS系统及驱动源码+基础烧写版本\驱动及系统源码
+</code></pre></div>
+</div>
+</div>
+</div>
+  <div id="xavier" style="position:fixed;top:2rem;left:5vw;z-index:1001;width:90vw;height:calc(100% - 4rem);margin:0 auto;backdrop-filter:blur(10px);border:1px solid rgba(125,125,125,.3);border-radius:5px;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);display:none;">
+<div class="top">Xavier镜像刷写</div>
+<div style="display:grid;grid-template-columns:2.4fr 1fr;height:calc(100% - 4rem);">
+<div style="overflow:auto;padding:1rem;">
+<b>硬件准备</b><br>
+电脑、Xavier、网线、杜邦线、双头USB、自控控制器板
+<p><b>软件准备</b><br>
+Ubuntu系统18.04、Linux_for_Tegra_4.4工具包、system.img镜像</p>
+<p><b>硬件连接配置</b></p>
+<ul>
+<li>J1烧写模式：用杜邦线将烧写模式配置接口中的<b class="red">7</b>脚与<b class="red">2</b>脚短接</li>
+<li>J2烧写模式：用杜邦线将烧写模式配置接口中的<b class="red">8</b>脚与<b class="red">2</b>脚短接<br>
+<img width="65%" src="../../public/img/ad_flash_ports.png"></li>
+</ul>
+<p>正确连接后，控制器上电后，在本地ubuntu系统中输入命令<code>lsusb</code>，若显示NVidia Corp的设备即表示成功进入烧写模式</p>
+<p><b>镜像准备</b></p>
+<p>需将想要刷入的镜像放到工具包中的<code>bootloader</code>目录下</p>
+<img width="65%" src="../../screenshots/system_img.png">
+<p>我们系统版本管理员手中有4个镜像，即101、102、103、104</p>
+<p>为了方便刷写操作可以使用链接文件，刷写镜像的时候，将<code>bootloader</code>下的<code>system.img</code>链接文件链接到对应镜像即可，这样有效节约了系统的存储空间</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token comment"># 在bootloader目录执行，system1.img是101的镜像，需替换成你需要镜像</span>
+<span class="token function">ln</span> <span class="token parameter variable">-sf</span> ~/Desktop/system1.img system.img
+</code></pre><p><b>刷写</b></p>
+<p>进入工具包文件夹，根据自己本机目录修改，然后运行刷机命令</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell shell"><code><span class="token function">sudo</span> ./flash.sh <span class="token parameter variable">-r</span> jetson-xavier mmcblk0p1
+</code></pre><img src="../../screenshots/flashed.png">
+</div>
+<div style="overflow:auto;border-left:1px solid #aaaaaa33;">
+<div style="padding:1rem;border-bottom:1px solid #aaaaaa33;">
+<div class="op50 text-sm">Files</div>
+<span>文件在 <b class="orange">smb文件服务器</b>，请连接实验室有线或无线网</span>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/smb_flash.png">
+</div>
+<div style="padding:1rem;">
+<div class="op50 text-sm">Paths</div>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\techshow\flash-xavier
+</code></pre></div>
+</div>
+</div>
+</div>
+  <div id="script" style="position:fixed;top:2rem;left:5vw;z-index:1001;width:90vw;height:calc(100% - 4rem);margin:0 auto;backdrop-filter:blur(10px);border:1px solid rgba(125,125,125,.3);border-radius:5px;box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);display:none;">
+<div class="top">Shell脚本</div>
+<div style="display:grid;grid-template-columns:2fr 1fr;height:calc(100% - 4rem);">
+<div style="overflow:auto;padding:1rem;">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">脚本</th>
+<th style="text-align:center">解释说明</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>mount_b.sh</code></td>
+<td style="text-align:center">xavier存储挂载脚本</td>
+<td style="text-align:center">运行后需重启系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>automatic_spot_check.sh</code></td>
+<td style="text-align:center">自动驾驶控制器自动化测试脚本</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="overflow:auto;border-left:1px solid #aaaaaa33;">
+<div style="padding:1rem;border-bottom:1px solid #aaaaaa33;">
+<div class="op50 text-sm">Files</div>
+<span>文件在 <b class="orange">smb文件服务器</b>，请连接实验室有线或无线网</span>
+<img style="margin-top:1rem;border:1px solid #aaa" src="../../screenshots/smb_script.png">
+</div>
+<div style="padding:1rem;">
+<div class="op50 text-sm">Paths</div>
+<pre data-role="codeBlock" data-info="txt" class="language-txt txt"><code>\\10.254.1.251\software\techshow\script
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div>
+  <table class="techtable">
+    <thead>
+      <tr>
+        <th class="table-head">Dynamic</th>
+        <th class="table-head">Tech</th>
+        <th class="table-head">Reading Total</th>
+        <th class="table-head">Finish Total</th>
+        <th class="table-head-right">Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="table-body"><span class="tag-purple">new</span></td>
+        <td class="table-body"><button id="showCameraDialog" class="showBtn">云控森云相机固件</button></td>
+        <td class="table-body"><span class="red">10 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body"><span class="red">20 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body-right"><span class="tag-green">sensing</span></td>
+      </tr>
+      <tr>
+        <td class="table-body"><span class="tag-purple">new</span></td>
+        <td class="table-body"><button id="showFiveDialog" class="showBtn">移远5G固件签名</button></td>
+        <td class="table-body"><span class="red">20 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body"><span class="red">60 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body-right"><span class="tag-green">sign-img</span></td>
+      </tr>
+      <tr>
+        <td class="table-body"><span class="tag-purple">new</span></td>
+        <td class="table-body"><button id="showOsDialog" class="showBtn">i.MX8QM系统编译</button></td>
+        <td class="table-body"><span class="red">5 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body"><span class="red">60 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body-right"><span class="tag-green">os</span></td>
+      </tr>
+      <tr>
+        <td class="table-body"><span class="tag-purple">new</span></td>
+        <td class="table-body"><button id="showXaiverDialog" class="showBtn">Xavier镜像刷写</button></td>
+        <td class="table-body"><span class="red">10 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body"><span class="red">60 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body-right"><span class="tag-green">flash-xavier</span></td>
+      </tr>
+      <tr>
+        <td class="table-body"><span class="tag-purple">new</span></td>
+        <td class="table-body"><button id="showScriptDialog" class="showBtn">shell脚本</button></td>
+        <td class="table-body"><span class="red">2 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body"><span class="red">20 <span class="op50 text-sm">min</span></span></td>
+        <td class="table-body-right"><span class="tag-green">script</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+const overlay = document.getElementById('overlay');
+
+const camera = document.getElementById('camera');
+const five = document.getElementById('five');
+const os = document.getElementById('os');
+const xavier = document.getElementById('xavier');
+const script = document.getElementById('script');
+
+const showCameraDialog = document.getElementById('showCameraDialog');
+const showFiveDialog = document.getElementById('showFiveDialog');
+const showOsDialog = document.getElementById('showOsDialog');
+const showXaiverDialog = document.getElementById('showXaiverDialog');
+const showScriptDialog = document.getElementById('showScriptDialog');
+
+overlay.addEventListener('click', function(event) {
+  if (event.target === overlay) {
+    overlay.style.display = 'none';
+    camera.style.display = 'none';
+    five.style.display = 'none';
+    os.style.display = 'none';
+    xavier.style.display = 'none';
+    script.style.display = 'none';
+  }
+});
+
+showCameraDialog.addEventListener('click', function() {
+  overlay.style.display = 'unset';
+  camera.style.display = 'unset';
+});
+
+showFiveDialog.addEventListener('click', function() {
+  overlay.style.display = 'unset';
+  five.style.display = 'unset';
+});
+
+showOsDialog.addEventListener('click', function() {
+  overlay.style.display = 'unset';
+  os.style.display = 'unset';
+});
+showXaiverDialog.addEventListener('click', function() {
+  overlay.style.display = 'unset';
+  xavier.style.display = 'unset';
+});
+showScriptDialog.addEventListener('click', function() {
+  overlay.style.display = 'unset';
+  script.style.display = 'unset';
+});
+</script>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

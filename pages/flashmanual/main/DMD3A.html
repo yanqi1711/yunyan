@@ -1,0 +1,488 @@
+<!DOCTYPE html><html><head>
+      <title>DMD3A</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/yanqi/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.19/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview {
+  left: unset!important;
+  transform: unset!important;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-top: 10px !important;
+}
+.markdown-preview a {
+  color: #758AD3;
+}
+.markdown-preview a:hover {
+  color: #687cc1;
+}
+.markdown-preview #version,
+.markdown-preview #flash {
+  color: #121212;
+}
+.markdown-preview #version:hover,
+.markdown-preview #flash:hover {
+  color: #636060;
+}
+::selection {
+  background-color: #DFDFDF;
+}
+.pink {
+  color: #D777B1 !important;
+}
+.yellow {
+  color: #E3B65E !important;
+}
+.blue {
+  color: #80BEDF !important;
+}
+.red {
+  color: #f87171 !important;
+}
+.cyan {
+  color: #34d399 !important;
+}
+.orange {
+  color: #fb923c !important;
+}
+.op50 {
+  opacity: 0.5 !important;
+}
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem!important;
+}
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+.option {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.option:hover {
+  left: 0%!important;
+}
+.btn-rose:hover {
+  color: #FB7185 !important;
+  background-color: rgba(252, 187, 195, 0.3) !important;
+  cursor: pointer;
+}
+.btn-rose:active {
+  color: #FB7185 !important;
+  background-color: rgba(253, 136, 152, 0.3) !important;
+  cursor: pointer;
+}
+hr {
+  width: 50px !important;
+  height: 0.7px !important;
+  margin: 2.3em auto !important;
+}
+.logo {
+  background: rgba(136, 136, 136, 0.133);
+  border-radius: 5%;
+  padding: 3px 6px;
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(-100%);
+  /* Move the tooltip above by default */
+}
+.card {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background: #fff;
+  border: 1px solid rgba(136, 136, 136, 0.27);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.card-text {
+  margin-left: 14px;
+  margin-right: 20px;
+  line-height: 28px;
+  color: #555555;
+}
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+th,
+td {
+  padding: 0.5rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border: 0px!important;
+}
+tr {
+  border-bottom: 2px solid rgba(156, 163, 175, 0.2);
+}
+tr:hover {
+  background-color: #FAFAFB !important;
+}
+table {
+  display: table!important;
+}
+.techtable tr {
+  border-bottom: none!important;
+}
+.flash:hover {
+  color: #727272 !important;
+}
+.tag-purple {
+  color: #2424a8;
+  background-color: rgba(36, 36, 168, 0.1);
+  border-radius: 5px;
+  font-size: small;
+  white-space: nowrap;
+  padding: 1px;
+}
+.tag-green {
+  color: #75a824;
+  background-color: rgba(117, 168, 36, 0.1);
+  border-radius: 5px;
+  font-size: small;
+  white-space: nowrap;
+  padding: 1px;
+}
+.table-head {
+  text-align: left!important;
+  font-size: 14px;
+  font-weight: 400!important;
+  line-height: 20px;
+  opacity: 0.5;
+}
+.table-head-right {
+  text-align: right!important;
+  font-size: 14px;
+  font-weight: 400!important;
+  line-height: 20px;
+  opacity: 0.5;
+}
+.table-body {
+  text-align: left;
+  font-weight: 400;
+  line-height: 24px;
+}
+.table-body-right {
+  text-align: right;
+  font-weight: 400;
+  line-height: 24px;
+}
+button {
+  cursor: pointer;
+}
+.showBtn {
+  padding: 0 8px;
+  border: 1px solid rgba(170, 170, 170, 0.2);
+  font-size: 16px;
+  border-radius: 0.25rem;
+  background-color: rgba(156, 163, 175, 0.02);
+  color: #AB5E3F !important;
+}
+.top {
+  font-size: 16px;
+  font-weight: bold;
+  color: #AB5E3F;
+  padding: 1rem;
+  border-bottom: 1px solid #aaaaaa33;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script> --><script type="text/javascript" src="https://unpkg.com/p5@1.9.4/lib/p5.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopBtn = document.createElement("button");
+    scrollToTopBtn.setAttribute("id", "scrollToTopBtn");
+    scrollToTopBtn.textContent = "↑";
+    scrollToTopBtn.style.fontSize = "1.2rem"
+    scrollToTopBtn.style.display = "none";
+    scrollToTopBtn.style.position = "fixed";
+    scrollToTopBtn.style.bottom = "20px";
+    scrollToTopBtn.style.right = "20px";
+    scrollToTopBtn.style.zIndex = "99";
+    scrollToTopBtn.style.color = "#0009";
+    scrollToTopBtn.style.cursor = "pointer";
+    scrollToTopBtn.style.padding = "10px 17px";
+    scrollToTopBtn.style.borderRadius = "9999px";
+    scrollToTopBtn.style.border = 'none';
+    scrollToTopBtn.style.backgroundColor = 'transparent';
+
+    document.body.appendChild(scrollToTopBtn);
+
+    // 当页面滚动时触发
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      // 如果页面滚动到视口高度的30%以上，显示回到顶部按钮，否则隐藏按钮
+      if (document.body.scrollTop > (document.documentElement.clientHeight * 0.3) || document.documentElement.scrollTop > (document.documentElement.clientHeight * 0.3)) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+
+    // 平滑滚动到页面顶部
+    function scrollToTop() {
+      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (currentScroll > 0) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    scrollToTopBtn.addEventListener('mouseover', function () {
+      scrollToTopBtn.style.backgroundColor = '#8883';
+    });
+
+    scrollToTopBtn.addEventListener('mouseout', function () {
+      scrollToTopBtn.style.backgroundColor = 'transparent';
+    });
+
+    scrollToTopBtn.onclick = function () {
+      scrollToTop();
+    };
+
+    if (!localStorage.getItem("background")) {
+      localStorage.setItem("background", "white");
+    }
+  });
+
+  let w = window.innerWidth
+  let h = window.innerHeight
+  const offsetY = window.scrollY
+
+  const SCALE = 200
+  const LENGTH = 10
+  const SPACING = 15
+  let shouldDrawBackground = true;
+
+  function getForceOnPoint(x, y, z) {
+    // https://p5js.org/reference/#/p5/noise
+    return (noise(x / SCALE, y / SCALE, z) - 0.5) * 2 * TWO_PI
+  }
+
+  const existingPoints = new Set()
+  const points = []
+
+  function addPoints() {
+    for (let x = -SPACING / 2; x < w + SPACING; x += SPACING) {
+      for (let y = -SPACING / 2; y < h + offsetY + SPACING; y += SPACING) {
+        const id = `${x}-${y}`
+        if (existingPoints.has(id))
+          continue
+        existingPoints.add(id)
+        points.push({ x, y, opacity: Math.random() * 0.5 + 0.5 })
+      }
+    }
+  }
+
+  function setup() {
+    createCanvas(w, h)
+    background('#ffffff')
+    const canvas = document.querySelector('canvas');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.zIndex = '-1';
+    noFill()
+    noiseSeed(+new Date())
+    frameRate(30)
+    addPoints()
+    if (localStorage.getItem("background") !== "dots") {
+      shouldDrawBackground = false;
+      noLoop()
+    }
+    // console.log('初始化')
+  }
+
+  function draw() {
+    if (shouldDrawBackground) {
+      background('#ffffff')
+      const t = +new Date() / 10000
+
+      for (const p of points) {
+        const { x, y } = p
+        const rad = getForceOnPoint(x, y, t)
+        const length = (noise(x / SCALE, y / SCALE, t * 2) + 0.5) * LENGTH
+        const nx = x + cos(rad) * length
+        const ny = y + sin(rad) * length
+        stroke(200, 200, 200, (Math.abs(cos(rad)) * 0.8 + 0.2) * p.opacity * 255)
+        circle(nx, ny - offsetY, 1)
+      }
+    }
+    // console.log('draw')
+  }
+
+  window.addEventListener('resize', () => {
+    if (localStorage.getItem("background" === "dots")) {
+      w = window.innerWidth
+      h = window.innerHeight
+      resizeCanvas(w, h)
+      addPoints()
+    }
+  })
+
+  function toggleCanvas() {
+    let background = localStorage.getItem("background");
+    if (background !== "dots") {
+      localStorage.setItem("background", "dots")
+      shouldDrawBackground = true
+      loop()
+    } else {
+      localStorage.setItem("background", "white")
+      shouldDrawBackground = false
+      noLoop()
+      clear()
+    }
+  }
+
+</script>
+</head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div style="
+  height: 4rem;
+  width:100%;
+  color:rgb(55,65,81,0.3);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;">
+  <a style="color:rgb(55,65,81,0.3);margin-left:0.7rem;border-bottom: 1px solid #7d7d7d4d" href="../index.html">cd ..</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<div style="margin-left:8.5px"><b>5G云控控制器刷写文档</b>
+<div style="position:relative;height:20px;pointer-events:none;">
+  <span style="font-size:5em;color:transparent; position:absolute;right:2rem;top:0rem;font-weight: bold;line-height:1em;-webkit-text-stroke-width:1.5px; -webkit-text-stroke-color:#aaa;opacity:0.35;">
+    DMD3A
+  </span>
+</div>
+<div style="margin:1.5em 0;">
+  <span style="color:#A3A3A3;">所有备份文件均在 <a style="border-bottom:1px solid;color:#A3A3A3;font-weight:bold;" href="../../../public/files/实验室映射网络共享磁盘教程.docx" download="">smb文件服务器</a></span>
+</div>
+<img width="50%" style="border:1px solid #aaa" src="../../../screenshots/smb.png">
+<h2>工具准备：</h2>
+<p>T形microusb线束：<br>
+<img width="30%" src="../../../public/img/T形usb线束.png"></p>
+<h2>操作步骤：</h2>
+<p>V2X刷写操作步骤较多，大致分为：<b class="pink">刷写、升级、配置</b></p>
+<p>注意：需提前安装<b class="blue">驱动</b>和<b class="yellow">刷写软件</b></p>
+<h3>驱动安装：</h3>
+<ol>
+<li><strong>GTL驱动</strong>：此驱动是刷写需要的驱动</li>
+</ol>
+<p>展开 gTL 文件夹，找到 driver 文件夹（如下图）根据操作系统类型选择运行 SetupX64.exe（64 位系统）或者 SetupX86.exe（32 位系统），根据提示安装</p>
+<img width="70%" style="border:1px solid #aaa" src="../../../screenshots/gTL_driver.png">
+<p>安装完成后确认<br>
+windows 徽标键——设置——应用，查看是否有如下程序</p>
+<img width="50%" style="border:1px solid #aaa" src="../../../screenshots/Leadcore.png">
+<ol start="2">
+<li><strong>V2X驱动</strong>：此驱动是连接V2X需要的驱动</li>
+</ol>
+<p>需要电脑和底板使用T形microusb线束连接（连接靠近SIM卡槽一侧的usb接口），底板上电</p>
+<img width="60%" src="../../../public/img/v2x底板接口.jpg">
+<p>1）打开安装包所在文件夹，将 rndismp6.sys 和 usb80236.sys 文件拷贝到电脑的 C:\Windows\System32\drivers 目录下，如果之前文件已经存在请做好备份</p>
+<img style="border:1px solid #aaa" src="../../../screenshots/sys.png">
+<p>2）进入kindle_rndis.inf_amd64文件夹，右键"5-runasadmin_register-CA-cer.cmd"以管理员身份运行</p>
+<img style="border:1px solid #aaa" src="../../../screenshots/v2x_ca.png">
+<p>3）将设备通过USB线与PC连接 打开设备管理器查看是否有未安装的驱动提示</p>
+<p>4）下图 ，如有黄色感叹号标签的未安装驱动提示，右击更新驱动程序--浏览计算机以查找驱动程序软件--找到kindle_rndis.inf_amd64文件夹选中即可自动安装</p>
+<img width="60%" style="border:1px solid #aaa" src="../../../screenshots/RNDIS驱动.png">
+<p>如果没有发现未安装驱动测试提示，则该驱动被Windows默认识别为串口 解决方法：板卡正常上电连接 USB 口，在设备管理中注意观察有没有新COM口</p>
+<img width="60%" style="border:1px solid #aaa" src="../../../screenshots/v2x_com.png">
+<p>右击新出的COM口——更新驱动程序——选中本地RNDIS驱动安装即可</p>
+<img width="60%" src="../../../screenshots/v2x_com_driver.png">
+<p>5）确认安装是否完成，安装完成后，USB 连接设备，在设备管理器处会自动识别为如下设备</p>
+<img width="50%" style="border:1px solid #aaa" src="../../../screenshots/v2x_usb_network.jpg">
+<p>此时可以通过ssh进入V2X系统</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token comment"># 进入v2x系统, 密码root</span>
+<span class="token function">ssh</span> root@192.168.62.199
+</code></pre><p><strong>刷写软件介绍</strong></p>
+<p>V2X系统刷写需要用到 gTL 软件，之后的系统升级和配置用的软件是gLMT</p>
+<img width="30%" src="../../../screenshots/v2x_刷写软件.png">
+<p><strong>系统刷写</strong> &nbsp;&nbsp;&nbsp;<span style="color:#A3A3A3;">需完成对应驱动的安装</span></p>
+<p>打开gTL_V5.2.3.0_20220330文件夹，双击gTL.exe进入gTL程序</p>
+<p>点击Muti-Download选项，进入Muti-Download 界面。点击GTL程序右上角选择 pks 文件，文件位于 gSafety_OBU_DMD3A_V7.4.2.1_ATU_SF_202211041915\4004 文件夹中</p>
+<img width="70%" style="border:1px solid #aaa" src="../../../screenshots/v2x_pks.png">
+<p>勾选十项要刷写的数据，其中除了Ptable 和 A_dtbs没有默认打勾 其他默认打勾</p>
+<img style="border:1px solid #aaa" src="../../../screenshots/v2x_table_dtbs.png">
+<p>打勾Partions_table后，选择ptable.bin文件（在v7.4.2.1系统包的4004路径下）</p>
+<img width="70%" style="border:1px solid #aaa" src="../../../screenshots/ptable.png">
+<p>打勾A_dtbs后，需要将文件类型改为所有 选择lc1860-DTVLVU4004-01.dtb文件</p>
+<img width="70%" style="border:1px solid #aaa" src="../../../screenshots/4004dtb.png">
+<p>一共十项数据内容与图中对比</p>
+<p><img width="90%" src="../../../screenshots/v2x_ten_1.png"><br><br>
+<img width="90%" src="../../../screenshots/v2x_ten_2.png"></p>
+<p>连接电脑与底板OTG 串口 靠近sim卡槽的串口，此时设备需要上电</p>
+<p>Multi-Dowload 界面点击按键“Start Download（开始下载）”</p>
+<img width="50%" style="border:1px solid #aaa" src="../../../screenshots/v2x_start.png">
+<p>点击完Start Download <b>设备快速下电上电</b>，GTL识别到设备，开始烧写固件。<br>
+刷写进度 100%后，进度条会变为绿色，显示烧录 Success</p>
+<img width="50%" style="border:1px solid #aaa" src="../../../screenshots/v2x_success.png">
+<p>拔出USB 线，设备断电重启后即可正常使用</p>
+<p><strong>V2X升级</strong> &nbsp;&nbsp;&nbsp;<span style="color:#A3A3A3;">需完成对应驱动的安装</span></p>
+<p>使用gLMT软件进行系统升级，软件密码为 root</p>
+<p>1）将<code>gSafety_OBU_DMD3A_V7.4.3.5_ATU_SF_202304201055-0725修复解码问题更新\4004\update.tar.gz</code>导入到glmt的文件管理里面，版本号填：gSafety_OBU_DMD3A_V7.4.3.5_ATU_SF_202304201055-0725</p>
+<img src="../../../screenshots/gLMT_add.png">
+<p>2）在设备管理页，添加一个设备</p>
+<img src="../../../screenshots/gLMT_add_2.png">
+<p>转接地址不用填写 如果正常识别到V2X驱动，软件可以识别到刚刚配置的地址，下拉框选择识别到的地址，起一个别名这里以test 为例 点击确定即可 如果显示设备状态显示在线 即代表连接成功</p>
+<img src="../../../screenshots/gLMT_online.png">
+<p>3）升级，将横向滚动条向右滚即可看见升级的进度条，升级时间较长，升级过程中不允许中断，否在系统可能崩溃，升级完毕后，系统会自动启动</p>
+<p><img src="../../../screenshots/gLMT_1.png"><br><img src="../../../screenshots/gLMT_2.png"></p>
+<p>4）将 <code>v2x\v2x升级及配置文件</code> 文件夹中的 <code>cfg</code> 文件夹里的内容替换到DMD3A模组中 <code>/system/etc/ncs_4layer/cfg</code> 里面，推荐使用mobax软件或者winscp进行传输，不容易出错</p>
+<p>5）将 <code>v2x\v2x升级及配置文件</code> 文件夹中的 <code>cur.cfg</code> 替换到DMD3A模组中 <code>/system/etc</code> 里面</p>
+<p>6）重启模组</p>
+<pre data-role="codeBlock" data-info="sh" class="language-bash sh"><code><span class="token comment"># 在v2x系统中输入以下两条命令</span>
+ncs_nr <span class="token parameter variable">-q</span>
+ncs_nr <span class="token parameter variable">-d</span>
+</code></pre><p>然后，重新上下电即可完成升级操作</p>
+<p><strong>v2x配置</strong></p>
+<p>此步骤必须得做，不然无法成功使gps locked、无法通过网络连接v2x</p>
+<p>接着升级步骤，重新上电后，仍然使用gLMT软件连接</p>
+<p><strong>网关配置</strong></p>
+<p>点击右上角参数按钮，进入参数页面配置，增加一个设备网关，按照下图进行配置</p>
+<img src="../../../screenshots/gLMT_3.png">
+<p>这样配置后我们就可以通过i.MX8QM进入到V2X的系统了</p>
+<p><strong>gnss配置</strong></p>
+<p>依然在参数页面，配置如下四项内容</p>
+<img src="../../../screenshots/gLMT_4.png">
+</div>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
